@@ -1,0 +1,42 @@
+.header {
+    color: khaki;
+    text-emphasis: bold;
+    font-family: "Helvetica";
+    text-align: center;
+    font-size: 100px;
+}
+
+.page_top {
+    background-image: url("./images/pexels-pixabay-159644.jpg");
+}
+
+h2 {
+    font-family: "Helvetica";
+    text-emphasis: bold;
+    color: white;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: "Helvetica";
+}
+
+p {
+    font-family: "Helvetica";
+}
+
+#sketch {
+    background-color: mediumspringgreen;
+}
+
+#multimedia {
+    background-color: lightcoral;
+}
+
+#writing {
+    background-color: skyblue;
+}
+
+#baking {
+    background-color: mediumpurple;
+}
