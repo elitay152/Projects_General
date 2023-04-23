@@ -1,0 +1,46 @@
+<button onclick="playGame('rock')">rock</button>
+<button onclick="playGame('paper')">paper</button>
+<button onclick="playGame('scissors')">scissors</button>
+<div id="results">
+
+</div>
+<script>
+
+function getComputerChoice() {
+  let randomNumber = Math.floor(Math.random() *3);
+  switch (randomNumber) {
+    case 0:
+      return 'rock';
+      break;
+    case 1:
+      return 'paper';
+      break;
+    case 2:
+      return 'scissors';
+      break;
+  }
+}
+
+function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+      return 'It\'s a tie.';
+    } else if (userChoice === 'paper' && computerChoice === 'rock') {
+      return 'You win!';
+    } else if (userChoice === 'rock' && computerChoice === 'scissors') {
+      return 'You win!';
+    } else if (userChoice === 'scissors' && computerChoice === 'paper') {
+      return 'You win!';
+    } else if (userChoice === 'bomb') {
+      return 'You win!';
+    } else { 
+      return 'You lose.';
+    }
+}
+
+function playGame(userInput) {
+  let computerChoice = getComputerChoice();
+  outcome = determineWinner(userInput, computerChoice);
+  document.getElementById('results').textContent=`You chose ${userInput}. The computer chose ${computerChoice}. ${outcome}`;
+}
+
+</script>
